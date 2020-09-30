@@ -1,0 +1,38 @@
+.team-member {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+
+  &__img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    border: $white 0.5rem solid;
+
+    @include box-shadow();
+  }
+
+  &__info {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  &__info-item {
+    &.name {
+      color: $primary;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .muted {
+      color: $gray-600;
+      font-size: 1rem;
+    }
+  }
+}

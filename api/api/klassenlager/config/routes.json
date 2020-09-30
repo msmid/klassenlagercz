@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/klassenlagers",
+      "handler": "klassenlager.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/klassenlagers/count",
+      "handler": "klassenlager.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/klassenlagers/:id",
+      "handler": "klassenlager.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/klassenlagers",
+      "handler": "klassenlager.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/klassenlagers/:id",
+      "handler": "klassenlager.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/klassenlagers/:id",
+      "handler": "klassenlager.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

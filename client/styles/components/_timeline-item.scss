@@ -1,0 +1,43 @@
+.timeline-item {
+  border-radius: 1rem;
+  border: $white 0.5rem solid;
+  background-color: $white;
+  margin-bottom: 4rem;
+  position: relative;
+
+  @include box-shadow();
+
+  &:after {
+    content: "";
+    width: 10px;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 1rem;
+    @include box-shadow();
+  }
+
+  &.last:after {
+    display: none;
+  }
+
+  &__header {
+    font-size: 1.5rem;
+  }
+
+  &__desc {
+    border-radius: 1rem;
+    background-color: $body-bg;
+  }
+
+  &__picture {
+    border-radius: 1rem;
+    background-color: $body-bg;
+
+    img {
+      border-radius: 1rem;
+      width: 100%;
+    }
+  }
+}

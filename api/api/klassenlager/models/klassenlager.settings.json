@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "klassenlagers",
+  "info": {
+    "name": "Klassenlager"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "year": {
+      "type": "integer",
+      "unique": true,
+      "min": 2020,
+      "required": true
+    },
+    "dateFrom": {
+      "type": "date",
+      "required": true
+    },
+    "dateTo": {
+      "type": "date",
+      "required": true
+    }
+  }
+}
