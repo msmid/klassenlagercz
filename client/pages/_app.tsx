@@ -2,7 +2,6 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  gql,
 } from "@apollo/client";
 import Settings from "../src/config/settings";
 import "../styles/styles.scss";
