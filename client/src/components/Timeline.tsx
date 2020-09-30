@@ -17,13 +17,13 @@ const Timeline: React.FC<Props> = () => {
   if (timeline) {
     timeline = timeline
       .slice()
-      .sort((a, b) => new Date(a.program.day) - new Date(b.program.day));
+      .sort((a, b) => Number(new Date(a.program.day)) - Number(new Date(b.program.day)));
     timeline = _.groupBy(timeline, "program.day");
     timelineKeys = Object.keys(timeline);
   }
 
   const sortByDatetime = (a, b) => {
-    return new Date(a.datetime) - new Date(b.datetime);
+    return Number(new Date(a.datetime)) - Number(new Date(b.datetime));
   };
 
   return (
