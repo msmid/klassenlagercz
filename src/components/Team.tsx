@@ -1,14 +1,25 @@
 import React from "react";
-import { useQuery } from "@apollo/client";
 import { Container, Row, Col } from "react-bootstrap";
-import { GET_TEAM_MEMBERS_WITH_PICTURES } from "../graphql/queries";
 import TeamMember from "./TeamMember";
 
-interface Props {}
+interface Picture {
+  url: string;
+  name: string;
+}
 
-const Team: React.FC<Props> = () => {
-  const { loading, error, data } = useQuery(GET_TEAM_MEMBERS_WITH_PICTURES);
+export interface TeamMember {
+  id: string;
+  fullname: string;
+  shortcut: string;
+  order: number;
+  picture: Picture;
+}
 
+interface TeamProps {
+  teamMembers: TeamMember[];
+}
+
+function Team({ teamMembers }: TeamProps) {
   return (
     <Container>
       <Row>
@@ -17,7 +28,7 @@ const Team: React.FC<Props> = () => {
         </Col>
       </Row>
       <Row>
-        {data?.teamMembers.map((member, key) => {
+        {teamMembers.map((member, key) => {
           return (
             <Col
               key={key}
@@ -33,6 +44,6 @@ const Team: React.FC<Props> = () => {
       </Row>
     </Container>
   );
-};
+}
 
 export default Team;
