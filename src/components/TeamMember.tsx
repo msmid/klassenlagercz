@@ -14,7 +14,7 @@ const TeamMember: React.FC<Props> = ({ member }) => {
           backgroundImage: `url(${Setting.API_DOMAIN}${member.picture.url})`,
         }}
       ></div>
-      <div className="team-member__info">
+      <div className="team-member__info mt-2">
         <div className="team-member__info-item name">
           {member.fullname} <span className="muted">{member.shortcut}</span>
         </div>
