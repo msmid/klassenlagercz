@@ -1,5 +1,4 @@
 import React from "react";
-import Setting from "../config/settings";
 
 interface Props {
   member: any;

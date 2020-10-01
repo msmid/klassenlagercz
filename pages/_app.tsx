@@ -1,4 +1,4 @@
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { ApolloProvider } from "@apollo/client";
 import { apolloClient } from "../src/config";
 import "../styles/styles.scss";
 import { AppProps } from "next/app";
