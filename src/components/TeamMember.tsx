@@ -11,7 +11,7 @@ const TeamMember: React.FC<Props> = ({ member }) => {
       <div
         className="team-member__img"
         style={{
-          backgroundImage: `url(${Setting.API_DOMAIN}${member.picture.url})`,
+          backgroundImage: `url(${member.picture.url})`,
         }}
       ></div>
       <div className="team-member__info mt-2">
