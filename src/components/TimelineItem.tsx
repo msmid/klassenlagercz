@@ -19,7 +19,7 @@ const TimelineItem: React.FC<Props> = ({ item, last }) => {
       </div>
       {item.picture ? (
         <div className="timeline-item__picture mt-2">
-          <img src={`${Setting.API_DOMAIN}${item.picture.url}`} />
+          <img src={`${item.picture.url}`} />
         </div>
       ) : (
         ""
